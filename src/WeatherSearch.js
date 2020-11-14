@@ -21,7 +21,7 @@ export default class Weather extends Component {
         const isSearched = this.state.isSearched;
         let searchLabel;
         if (isSearched) {
-            searchLabel= <DisplayWeather/>
+            searchLabel= <DisplayWeather location = {document.getElementById('search').value}/>
         } else {
             searchLabel = <h1>Enter a location</h1>
         }

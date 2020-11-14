@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react';
-function DisplayWeather(props) {
+//function DisplayWeather(props) {
+const DisplayWeather = (props) => {
     const { REACT_APP_API_KEY } = process.env;
     async function getWeather(){
-      let res = await fetch("http://api.openweathermap.org/data/2.5/weather?q=London&appid="+REACT_APP_API_KEY+"&mode=json")
+      let res = await fetch("http://api.openweathermap.org/data/2.5/weather?q="+props.location+"&appid="+REACT_APP_API_KEY+"&mode=json")
       let data = await res.json()
 
       let weather = {
