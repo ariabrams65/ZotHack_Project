@@ -10,7 +10,9 @@ export default class Weather extends Component {
                         Search:
                         <input type="text"></input>
                     </label>
+                    <input type="submit" value="Go"></input>
                 </form>
+                <h1>Enter a location</h1>
             </div>
         );
     }
