@@ -17,23 +17,24 @@ export default class Weather extends Component {
         event.preventDefault();
     };
 
+    changed = (event) =>{
+        this.setState({isSearched: false});
+        event.preventDefault();
+    }
+
     render() {
         const isSearched = this.state.isSearched;
         let searchLabel;
         if (isSearched) {
             searchLabel= <DisplayWeather location = {document.getElementById('search').value}/>
+            console.log(document.getElementById('search').value)
         } else {
             searchLabel = <h1>Enter a location</h1>
         }
         return (
             <div>
-                <form className="form" onSubmit={this.handleSubmit}>
-                    <label>
-                        Search:
-                        <input id = 'search' type="text"></input>
-                    </label>
-                    <input type="submit" value="Go"></input>
-                </form>
+                <input type = 'text' id = 'search' onChange = {this.changed}></input>
+                <button onClick = {this.handleSubmit}>Go</button>
                 {searchLabel}
             </div>
         );
