@@ -8,7 +8,8 @@ export default class Weather extends Component {
                 <form className="form" >
                     <label>
                         Search:
-                        <input type="text"></input>
+                        <input id = 'search' type="text"></input>
+                        
                     </label>
                 </form>
             </div>
