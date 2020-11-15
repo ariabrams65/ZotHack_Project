@@ -9,7 +9,10 @@ const DisplayWeather = (props) => {
     const { REACT_APP_API_KEY } = process.env;
     async function getWeather(){
       let res = await fetch("http://api.openweathermap.org/data/2.5/weather?q="+props.location+"&appid="+REACT_APP_API_KEY+"&mode=json")
+      
+      
       let data = await res.json()
+      if (data.weather===undefined) return null
       let image = null
       if (data.weather[0].main==="Clear"){
         image = Clear
@@ -17,7 +20,7 @@ const DisplayWeather = (props) => {
       else if(data.weather[0].main==="Clouds"){
         image = Cloud
       }
-      else if(data.weather[0].main==="Rain"){
+      else if(data.weather[0].main==="Rain" || data.weather[0].main==="Drizzle"){
         image = Rain
       }
       else if(data.weather[0].main==="Snow"){
@@ -26,6 +29,7 @@ const DisplayWeather = (props) => {
       let weather = {
         type: data.weather[0].main,
         description: data.weather[0].description,
+        temp: parseInt(data.main.temp-273)+"°C",
         image: image
       }
       return weather
@@ -41,12 +45,13 @@ const DisplayWeather = (props) => {
 
 
     return (
-      <div className="response">
-        <div> {token!=null?token.temp:null}</div>
+      <div>
         <div> {token!=null?token.type:null}</div>
 
         <div> {token!=null?token.description:null}</div>
         <img src={token!=null?token.image:null} width = "100" height = "100"/>
+
+        <div> {token!=null?token.temp:null}</div>
       </div>
     );
   }
