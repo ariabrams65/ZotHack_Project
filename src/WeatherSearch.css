@@ -1,0 +1,23 @@
+.searchbar{
+    height:1.5em;
+    width: 20em;
+    border-style: solid;  
+    border-width: medium;  
+    border-color: rgb(15, 15, 15);
+    font-size: xx-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+button{
+    height: 1.69em;
+    font-size: xx-large;
+    border-width: thin; 
+    border-color: black; 
+
+}
+
+button:hover{
+    border-width:medium;
+    border-color: black;
+}
