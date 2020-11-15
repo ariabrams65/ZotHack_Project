@@ -24,6 +24,10 @@ button:hover{
     border-color: rgb(194, 194, 64);
 }
 
-.info{
+.greeting{
     text-align: center;
+}
+
+.info{
+    font-size: x-large;
 }
