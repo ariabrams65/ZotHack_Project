@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css';
 import Weather from "./WeatherSearch"
-import DisplayWeather from "./components/climate.js"
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-       
+        <h2 className='title'>Weather App</h2>
         <Weather/>
         
       </header>

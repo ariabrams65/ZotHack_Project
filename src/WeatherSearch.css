@@ -7,17 +7,23 @@
     font-size: xx-large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
+    border-radius: 10px
 }
 
 button{
     height: 1.69em;
     font-size: xx-large;
-    border-width: thin; 
+    border-width: medium; 
     border-color: black; 
+    margin-left: 5px;
+    border-radius: 10px;
 
 }
 
 button:hover{
-    border-width:medium;
-    border-color: black;
+    border-color: rgb(194, 194, 64);
+}
+
+.info{
+    text-align: center;
 }

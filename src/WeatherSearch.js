@@ -29,7 +29,7 @@ export default class Weather extends Component {
             searchLabel= <DisplayWeather location = {document.getElementById('search').value}/>
             console.log(document.getElementById('search').value)
         } else {
-            searchLabel = <h1>Enter a location</h1>
+            searchLabel = <h1 className="info">Enter a location</h1>
         }
         return (
             <div>

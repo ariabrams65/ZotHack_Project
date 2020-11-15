@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './climate.css'
 //function DisplayWeather(props) {
 const DisplayWeather = (props) => {
     const { REACT_APP_API_KEY } = process.env;
@@ -23,7 +24,7 @@ const DisplayWeather = (props) => {
 
     return (
       <div>
-        <div> {token!=null?token.temp:null}</div>
+        <div className="response"> {token!=null?token.temp:null}</div>
       </div>
     );
   }
