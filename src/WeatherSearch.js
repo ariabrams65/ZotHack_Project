@@ -33,7 +33,7 @@ export default class Weather extends Component {
         }
         return (
             <div>
-                <input type = 'text' id = 'search' onChange = {this.changed}></input>
+                <input className ="searchbar" type = 'text' id = 'search' onChange = {this.changed}></input>
                 <button onClick = {this.handleSubmit}>Go</button>
                 {searchLabel}
             </div>
