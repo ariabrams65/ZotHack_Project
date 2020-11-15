@@ -45,7 +45,7 @@ const DisplayWeather = (props) => {
 
 
     return (
-      <div>
+      <div className="response">
         <div> {token!=null?token.type:null}</div>
 
         <div> {token!=null?token.description:null}</div>
